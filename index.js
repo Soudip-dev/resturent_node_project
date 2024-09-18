@@ -4,17 +4,16 @@ const cors = require("cors")
 const morgan = require("morgan")
 const dotenv = require("dotenv")
 const colors =require("colors")
-const mongoose = require("mongoose")
+
+const {connectDB}= require("./config/db")
 const port = process.env.PORT  || 8080
 
 app.listen(port, () => {
     console.log(`Server started at port ${port}`.bgYellow)
 })
-mongoose.connect("mongodb+srv://soudip19:I5zy623MVY4Rx4eU@cluster0.o5t0c.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").then(() => {
-    console.log("DB Connected".bgMagenta)
-}).catch((err) => {
-    console.log(`Error is ${err}`)
-})
+
+connectDB()
+
 
 // /////////////middleware>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 dotenv.config() 
