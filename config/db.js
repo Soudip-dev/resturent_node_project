@@ -11,7 +11,7 @@ const colors = require("colors")
 const connectDB = async() => {
     try {
 
-        await mongoose.connect(`mongodb+srv://soudip19:I5zy623MVY4Rx4eU@cluster0.o5t0c.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
+        await mongoose.connect(`mongodb+srv://soudip19:I5zy623MVY4Rx4eU@cluster0.o5t0c.mongodb.net/resturant-app`)
       console.log(`Connected to Data Base>>>> ${mongoose.connection.host}`.bgMagenta)
         
     } catch (err) {
