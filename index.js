@@ -31,6 +31,10 @@ app.use('/api/v1/category', require("./routes/categoryRoute"))
 app.use('/api/v1/food/', require("./routes/foodRoute"))
 
 
+// /////////////////////////////////////////////////////////////backend end>>>>
+
+// app.use('/page', require('./admin/admin_route/adminRoute'))
+
 app.get('/', ( req, res) => {
     return res.status(200).send(`<h1>Wellcome Soudip</h1>`)
 })

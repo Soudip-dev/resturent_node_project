@@ -1,12 +1,14 @@
 const mongoose = require("mongoose")
 
-const foodSchema = new mongoose.Schema({
-    foods: [
+const orderSchema = new mongoose.Schema({
+    
+   foods: [
         {
             type: mongoose.Schema.Types.ObjectId,
            ref:"food"
        }
-    ],
+    ]
+    ,
     payment: {},
     buyer: {
         type: mongoose.Schema.Types.ObjectId,
@@ -20,4 +22,4 @@ const foodSchema = new mongoose.Schema({
 
 },{timestamps:true})
 
-module.exports= mongoose.model("food", foodSchema)
+module.exports= mongoose.model("orders", orderSchema)

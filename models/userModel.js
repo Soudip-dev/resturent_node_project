@@ -6,7 +6,7 @@ const userSchema =  new mongoose.Schema({
     password: {type:String, require :[true, "user password is reqired"] },
     address: {type:Array, },
     phoneNo: {type:String, require :[true, "user phone number is reqired"], unique:true},
-    usertype: { type: String, default :"clinet"  },
+    usertype: { type: String, enum: ['admin', 'clinet', 'common'],default :"clinet"  },
     profile: { type: String, default: "https://i.postimg.cc/LX9g3QWC/blank-image.webp" },
     answer: { type: String, require: [true, "Answer is required"]}
     
